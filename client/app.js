@@ -3,8 +3,8 @@ console.log("connected");
 
 //DON'T FORGET TO CHANGE THIS
 const apiURL = window.location.protocol === 'file:'
-    ? 'http://localhost:8080' // local api server during development
-    : ''; //Production API
+    ? 'http://localhost:8080/backend' // local api server during development
+    : 'http://planner.zorran.tech/backend'; //Production API
 
 loadPlansFromServer();
 
