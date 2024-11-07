@@ -17,7 +17,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: projectcontour
+  name: elizaprojectcontour
 ---
 apiVersion: v1
 kind: ServiceAccount
