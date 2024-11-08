@@ -29,5 +29,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30002  # Add this line to specify the NodePort
+      nodePort: 30005  # Add this line to specify the NodePort
   type: NodePort
