@@ -7,7 +7,11 @@ metadata:
     projectcontour.io/rewrite-target: /$2
 spec:
   rules:
+<<<<<<< HEAD
     - host: eliza.zorran.tech
+=======
+    - host: test.zorran.tech
+>>>>>>> 6a3a604 (what)
       http:
         paths:
           - path: /plans
@@ -25,7 +29,11 @@ metadata:
   name: elizaplanner-ingress-frontend
 spec:
   rules:
+<<<<<<< HEAD
     - host: eliza.zorran.tech
+=======
+    - host: test.zorran.tech
+>>>>>>> 6a3a604 (what)
       http:
         paths:
           - path: /
