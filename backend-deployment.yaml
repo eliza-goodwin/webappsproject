@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elizabackend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elizabackend
+  template:
+    metadata:
+      labels:
+        app: elizabackend
+    spec:
+      containers:
+      - name: backend
+        image: zorranschool/elizaplannerbackend:test
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elizabackend-service
+spec:
+  selector:
+    app: elizabackend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP

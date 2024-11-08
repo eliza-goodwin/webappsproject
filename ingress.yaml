@@ -1,0 +1,37 @@
+# Ingress for the backend service
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: elizaplanner-ingress-backend
+  annotations:
+    projectcontour.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: test.zorran.tech
+      http:
+        paths:
+          - path: /plans
+            pathType: Prefix
+            backend:
+              service:
+                name: elizabackend-service
+                port:
+                  number: 8080
+---
+# Ingress for the frontend service
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: elizaplanner-ingress-frontend
+spec:
+  rules:
+    - host: test.zorran.tech
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: elizafrontend-service
+                port:
+                  number: 80
