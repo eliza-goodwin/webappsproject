@@ -1,4 +1,0 @@
-flask
-passlib
-pysqlite3
-bcrypt
