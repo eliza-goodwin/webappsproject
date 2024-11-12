@@ -89,8 +89,6 @@ In ingress.yaml change it to the domain you wish for it to have (In this case el
 
 ### Applying Kubernetes YAML Files
 
-The `deploy.sh` script applies the necessary Kubernetes YAML files if you say yes to deploy:
-
 - `contour.yaml`: Namespace and necessary roles and bindings. (Uses eliza namespace to avoid coflicts with other contours)
 - `backend-deployment.yaml`: Deployment and service for the backend application. (Under the name: elizabackend)
 - `frontend-deployment.yaml`: Deployment and service for the frontend application. (Under the name: elizafrontend)
